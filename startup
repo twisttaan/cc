@@ -320,6 +320,8 @@ end
 
 -- Print how many percent of the storage is full
 function printPercentFull(row)
+  local stored = row.energy.getEnergyStored()
+  
   row.monitor.setCursorPos(row.x-4, 1)
   row.monitor.write(stored .. " RF")
 end
